@@ -19,7 +19,7 @@ export default {
   data () {
     return {}
   },
-  mounted () {
+  created () {
     this.$store.dispatch('loadMore')
   }
 }

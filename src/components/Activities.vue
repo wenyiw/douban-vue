@@ -4,7 +4,7 @@
       <router-link
         :key='item.id'
         class="thumbnail"
-        :to="{name: 'DetailView', params: { id: item.id }}">
+        :to="{name: 'Activity', params: { id: item.id }}">
         <div class="content">
           <img :src="item.image_hlarge" alt="cover">
           <h3>{{item.title}}</h3>

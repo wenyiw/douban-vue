@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '../views/Home'
-import Movies from '../views/Movies'
-import Books from '../views/Books'
-import Broadcasts from '../views/Broadcasts'
-import Groups from '../views/Groups'
+import Home from '../pages/Home'
+import Movies from '../pages/Movies'
+import Books from '../pages/Books'
+import Broadcasts from '../pages/Broadcasts'
+import Groups from '../pages/Groups'
+import Activity from '../pages/Activity'
 
 Vue.use(Router)
 
@@ -39,6 +40,11 @@ export default new Router({
       path: '/groups',
       name: 'Groups',
       component: Groups
+    },
+    {
+      path: '/activity/:id',
+      name: 'Activity',
+      component: Activity
     }
   ]
 })
