@@ -1,5 +1,5 @@
 <template>
-  <div class="header-bar">
+  <div class="header-bar" v-show="!login">
     <h1 class="title">
       <router-link :to="{ name: 'Home'}">Douban</router-link>
     </h1>
@@ -17,13 +17,28 @@
         <router-link style="color: #2AB8CC" :to="{ name: 'Groups'}">Groups</router-link>
       </li>
     </ul>
-    <span class="talion"></span>
+    <span class="talion" @click="showTalion"></span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'header-guide'
+  name: 'header-guide',
+  data () {
+    return {
+      login: false
+    }
+  },
+  watch: {
+    '$route.path': function () {
+      this.login = (this.$route.path === '/login' || this.$route.path === '/register')
+    }
+  },
+  methods: {
+    showTalion: function () {
+      this.$emit('showTalion')
+    }
+  }
 }
 </script>
 

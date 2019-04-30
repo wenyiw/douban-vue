@@ -7,6 +7,10 @@ import Books from '../pages/Books'
 import Broadcasts from '../pages/Broadcasts'
 import Groups from '../pages/Groups'
 import Activity from '../pages/Activity'
+import Login from '../pages/Login'
+import Register from '../pages/Register'
+import Subject from '../pages/Subject'
+import Search from '../pages/Search'
 
 Vue.use(Router)
 
@@ -45,6 +49,26 @@ export default new Router({
       path: '/activity/:id',
       name: 'Activity',
       component: Activity
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
+    },
+    {
+      path: '/:classify/subject/:id',
+      name: 'Subject',
+      component: Subject
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search
     }
   ]
 })

@@ -11,15 +11,23 @@ Day 1
       pages/: code (placeholder for now) for each router-view
   Step 3
     pages/Home.vue
-      in created, dispatch actions to get data from api
-      note: ad-blocker may block calls (net::ERR_BLOCKED_BY_CLIENT)
     components/Activities.vue
-      get activities from the store
+      script
+        import mapstate, components, etc.
+        export default
+          name,
+          components,
+          computed,
+            map state
+          created
+            get activities from the store by calling actions
+            note: ad-blocker may block calls (net::ERR_BLOCKED_BY_CLIENT)
     vuex
       main.js: import vuex
       store/index.js: export modules
       store/modules: 
         .js: define states, mutations, actions
+        mutations directly modify states, actions call mutations
 Day 2
   Step 4
     implement details of each activity from the home view
@@ -32,6 +40,26 @@ Day 2
     pages/Books.vue
       get books from the store
     vuex: same as in step 3
+
+Day 3
+  Step 6
+    pages/Movies.vue
+      get movies from the store
+    vuex: same as in step 3
+  Step 7
+    pages/Broadcasts.vue
+      login/signup
+
+Day 4
+  Step 8
+    movie details
+
+Day 5 
+  Step 9
+    Broadcasts: simply reuse card and user components
+  Step 10
+    pages/Search.vue
+
 
 
 

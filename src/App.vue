@@ -1,17 +1,33 @@
 <template>
   <div id="app">
-    <HeaderGuide/>
+    <HeaderGuide @showTalion="open"/>
     <router-view/> 
+    <talion v-show="talion" @closeTalion="close"></talion>
   </div>
 </template>
 
 <script>
 
 import HeaderGuide from './components/HeaderGuide'
+import Talion from './pages/Talion'
 
 export default {
   components: {
-    HeaderGuide
+    HeaderGuide,
+    Talion
+  },
+  data () {
+    return {
+      talion: ''
+    }
+  },
+  methods: {
+    open: function () {
+      this.talion = 'open'
+    },
+    close: function () {
+      this.talion = ''
+    }
   }
 }
 </script>
